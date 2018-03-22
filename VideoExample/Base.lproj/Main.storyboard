@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TX0-7Z-yGA">
+                                <rect key="frame" x="39.5" y="196" width="295" height="295"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0s-hZ-ExR" customClass="PlayerView" customModule="VideoExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-0.5" width="295" height="295"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="z0s-hZ-ExR" firstAttribute="centerY" secondItem="TX0-7Z-yGA" secondAttribute="centerY" id="7AY-8E-fgn"/>
+                                    <constraint firstItem="z0s-hZ-ExR" firstAttribute="width" secondItem="TX0-7Z-yGA" secondAttribute="width" id="FVv-bW-30M"/>
+                                    <constraint firstItem="z0s-hZ-ExR" firstAttribute="centerX" secondItem="TX0-7Z-yGA" secondAttribute="centerX" id="FeN-6m-evH"/>
+                                    <constraint firstItem="z0s-hZ-ExR" firstAttribute="height" secondItem="TX0-7Z-yGA" secondAttribute="height" id="ZZ2-os-hHv"/>
+                                    <constraint firstAttribute="width" secondItem="TX0-7Z-yGA" secondAttribute="height" multiplier="1:1" id="sgi-tS-7bo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TX0-7Z-yGA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NzG-Jz-9vF"/>
+                            <constraint firstItem="TX0-7Z-yGA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZbX-vE-A2B"/>
+                            <constraint firstItem="TX0-7Z-yGA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-80" id="p8O-0j-esg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="TX0-7Z-yGA" id="fsY-eI-gCo"/>
+                        <outlet property="playerView" destination="z0s-hZ-ExR" id="NAO-6a-SPc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
